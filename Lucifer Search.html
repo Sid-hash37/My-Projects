@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link href='https://fonts.googleapis.com/css?family=Saira Stencil One' rel='stylesheet'>
+        <title>Lucifer Search</title>
+        <style>
+            body{
+                background-color:black;
+            }
+            input.enter-control{
+                outline:none;
+                background-color:black;
+                border:none;
+                border-bottom: 1px solid teal;
+                width:400px;
+                color:white;
+                border-radius:7px;
+                text-align:center;
+                position:relative;
+                top:250px;
+                height:30px;
+            }
+            input.enter-control:hover{
+                box-shadow: 0 0 50px #666;
+            }
+            button.effect:hover{
+                box-shadow:0 0 30px #666;
+            }
+        </style>
+    </head>
+    <body>
+    <font face = "Saira Stencil One"><center style = "color:white;font-size:50px;position:relative;top:100px;left:10px;"><u>Lucifer Search V2.0 🔍</u></center></font><button style = "position:relative;top:275px;left:830px;border-radius:30px;border:none;outline:none;background-color:black;" class = "effect" onclick = "record()">🎙️</button>
+    <center><input type = "text"  class = "enter-control" placeholder = "Type anything to search....." id = "myInput" value = "Hello , Siddharth"></center>
+    <center><button style = "position:relative;top:225px;left:140px;border-radius:30px;border:none;outline:none;background-color:black;" class = "effect" onclick = "myFunction()">🔍</button></center>
+    <script>
+        function myFunction(){
+            var search = document.getElementById("myInput").value;
+            if (search == null || search == ""){
+                window.alert("Please type some text to search.......");
+            }
+            else{
+                window.open("https://www.google.com/search?q=" + search);
+            }
+        }
+        var recognition = new webkitSpeechRecognition();
+        recognition.lang = 'en-GB';
+        function record(){
+          recognition.onresult = function(event){
+            console.log(event);
+            document.getElementById("myInput").value = event.results[0][0].transcript;
+             var search = document.getElementById("myInput").value;
+              if (search == "open scratch"){
+                  window.open("https://scratch.mit.edu/");
+              }
+                else if (search == "open Google classroom"){
+                  window.open("https://classroom.google.com/u/0/h");
+                }
+                 else if (search == "open YouTube"){
+                    window.open("https://www.youtube.com/");
+                 }
+                   else if (search == "Open meet" || search == "open Google meet"){
+                     window.open("https://meet.google.com/");
+                  }
+                  else if (search == "open special assembly link"){
+                    window.open("https://meet.google.com/ptp-qery-ahb");
+                  }
+                  else if(search == "open online class time table"){
+                    window.open("https://docs.google.com/document/d/1qTAC0fM6xhnch3bRA_s7NRnM48rblrjg9Qvs0ExLx6k/edit");
+                  }
+                  else if (search == "open normal online class link"){
+                    window.open("https://meet.google.com/bbo-ufvs-voj");
+                  }
+                  else if(search == "open Gmail"){
+                    window.open("https://mail.google.com/mail/u/0/#inbox");
+                  }
+                  else if (search == "open google drive"){
+                    window.open("https://drive.google.com/drive/u/0/my-drive");
+                  }
+                  else if(search == "open Google Drive"){
+                    window.open("https://drive.google.com/drive/u/0/my-drive")
+                  }
+                  else if(search == "open exam link"){
+                    window.open("https://meet.google.com/deh-mvcw-nfz");
+                  }
+                  else{
+                   window.open("https://www.google.com/search?q=" + search);
+                  }
+          }
+          recognition.start();
+        }
+    </script>
+    <center><img src = "C:\Users\siddharth\Downloads\scratch.png" style = "width:40px;background-color:black;position:relative;top:270px;left:-90px;"onclick = "scratch()"></center>
+    <script>
+        function scratch(){
+            window.open("https://scratch.mit.edu/");
+        }
+    </script>
+    <center><img src = "C:\Users\siddharth\Downloads\youtube.jpg" style = "width:50px;position:relative;top:235px;" onclick = "youtube()"></center>
+    <script>
+        function youtube(){
+            window.open("https://www.youtube.com/");
+        }
+    </script>
+    <center><img src = "C:\Users\siddharth\Downloads\meet.png" style = "position:relative;width:40px;top:200px;left:90px;" onclick = "meet()"></center>
+    <script>
+        function meet(){
+            window.open("https://meet.google.com/");
+        }
+    </script>
+    <center><img src = "C:\Users\siddharth\Downloads\google-classroom.png" style = "width:50px;position:relative;top:200px;" onclick = "classroom()"></center>
+    <script>
+        function classroom(){
+            window.open("https://classroom.google.com/u/0/h");
+        }
+    </script>
+    </body>
+</html>
